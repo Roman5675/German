@@ -8,10 +8,6 @@ new Swiper('.price-slider', {
     spaceBetween: 87,
     loop: false,
     loopedSlides: 0,
-    pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-    },
 });
 
 
