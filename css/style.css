@@ -116,7 +116,6 @@ img {
 
 .container {
   position: relative;
-  max-width: 1400px;
   margin: 0px auto;
 }
 
@@ -820,12 +819,12 @@ img {
 }
 @media (max-width: 992px) {
   .teachers__column {
-    height: 900px;
+    height: 930px;
   }
 }
 @media (max-width: 767px) {
   .teachers__column {
-    height: 900px;
+    height: 1000px;
   }
 }
 
@@ -946,14 +945,16 @@ img {
 }
 .teachers__tabs-block:target {
   display: block;
+  width: auto;
+  height: auto;
 }
 
 .teachers__tabs__row {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 692px;
-  height: 393px;
+  width: auto;
+  height: auto;
   border: 5px solid #EE892D;
   background: var(--white-fill, rgba(255, 255, 255, 0.3));
   gap: 30.49px;
@@ -987,13 +988,12 @@ img {
 }
 
 .teachers__tabs-text {
-  font-size: 11px;
+  font-size: 15px;
   font-weight: 500;
   padding: 64.87px 0px 0px 17px;
 }
 .teachers__tabs-text p {
   padding-bottom: 15px;
-  max-width: 363.505px;
 }
 
 .qa__column {
@@ -1657,7 +1657,7 @@ img {
   border: 1px solid #272343;
   font-size: 18px;
   font-weight: 700;
-  color: #83eb6e;
+  color: #272343;
   padding-left: 16px;
   margin-bottom: 28px;
 }

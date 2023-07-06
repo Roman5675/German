@@ -33,7 +33,6 @@ img{
 
 .container {
     position: relative;
-    max-width: 1400px;
     margin: 0px auto;
 }
 
@@ -619,11 +618,11 @@ img{
     display: flex;
     flex-direction: column;
     @media (max-width: 992px) {
-        height: 900px;
+        height: 930px;
     }
     
     @media (max-width: 767px) {
-        height: 900px;
+        height: 1000px;
     }
 }
 .teachers__title {
@@ -713,18 +712,20 @@ img{
     display: none;
     &:target {
         display: block;
+        width: auto;
+        height: auto;
     }
 } 
 .teachers__tabs__row {
     display: flex;
-    width: 692px;
-    height: 393px;
+    width: auto;
+    height: auto;
     border: 5px solid #EE892D;
     background: var(--white-fill, rgba(255, 255, 255, 0.30));
     gap: 30.49px;
     margin-left: 0px;
     img {
-        max-height: 393px;;
+        max-height: 393px;
     }
     @media (max-width: 1420px) {
        justify-content: center; 
@@ -744,12 +745,11 @@ img{
     
 }
 .teachers__tabs-text {
-    font-size: 11px;
+    font-size: 15px;
     font-weight: 500;
     padding: 64.87px 0px 0px 17px;
     p {
         padding-bottom: 15px;
-        max-width: 363.505px;
     }
 }
 
@@ -1231,7 +1231,7 @@ img{
         border: 1px solid #272343;
         font-size: 18px;
         font-weight: 700;
-        color: #83eb6e;
+        color: #272343;
         padding-left: 16px;
         margin-bottom: 28px;
         &:hover {
