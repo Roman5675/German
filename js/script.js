@@ -82,3 +82,24 @@ if(menuLinks.length > 0) {
         }
     }
 }
+
+//Прокрутка при клике на меню header
+const footerLinks = document.querySelectorAll('.footer__link[data-goto]');
+if(footerLinks.length > 0) {
+    footerLinks.forEach(footerLink => {
+        footerLink.addEventListener("click", onFooterLinkClick);
+    });
+    function onFooterLinkClick(e) {
+        const footerLink = e.target;
+        if (footerLink.dataset.goto && document.querySelector(footerLink.dataset.goto)) {
+            const gotoBlock = document.querySelector(footerLink.dataset.goto);
+            const gotoBlockValue = gotoBlock.getBoundingClientRect().top + pageYOffset - document.querySelector('header').offsetHeight;
+            
+            window.scrollTo({
+                top: gotoBlockValue,
+                behavior: "smooth"
+            });
+            e.preventDefault();
+        }
+    }
+}
