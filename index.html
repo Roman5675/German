@@ -11,27 +11,34 @@
 <body>
 	<div class="wrapper">
 		<header class="header">
-			<div class="container">
-				<div class="header__row">
-					<div class="header__logo">
-						<a href="/">
-							<p>academy</p>
-						</a>
+			<div class="header__row">
+				<div class="header__logo">
+					<a href="/">
+						<p>academy</p>
+					</a>
+				</div>
+				<div class="header__menu menu">
+					<div class="menu__icon">
+						<span>
+
+						</span>
 					</div>
-					<div class="header__list">
-						<a href="/">
-							<p>about classes</p>
-						</a>
-						<a href="/">
-							<p>about teachers</p>
-						</a>
-						<a href="/">
-							<p>price list</p>
-						</a>
-						<a href="/">
-							<p>q&a</p>
-						</a>
-					</div>
+					<nav class="menu__body">
+						<ul class="menu__list">
+							<li>
+								<a data-goto=".classes__section_1" href="#" class="menu__link">about classes</a>
+							</li>
+							<li>
+								<a data-goto=".price__section_2" href="#" class="menu__link">price list</a>
+							</li>
+							<li>
+								<a data-goto=".teachers__section_3" href="#" class="menu__link">about teachers</a>
+							</li>
+							<li>
+								<a data-goto=".qa__section_4" href="#" class="menu__link">q&a</a>
+							</li>
+						</ul>
+					</nav>
 				</div>
 			</div>
 		</header>
@@ -67,7 +74,7 @@
 			<section class="classes-price">
 				<div class="container">
 					<div class="classes-price__background">
-						<section class="classes">
+						<section class="classes classes__section_1">
 							<div class="classes__column">
 								<div class="classes__title">
 									<h2>About classes</h2>
@@ -95,7 +102,7 @@
 							</div>
 						</section>
 
-						<section class="price">
+						<section class="price price__section_2">
 							<div class="price__column">
 								<div class="price__title">
 									<h2>Price list</h2>
@@ -165,7 +172,7 @@
 			<section class="teachers-qa">
 				<div class="container">
 					<div class="teachers-qa__backbround">
-						<section class="teachers">
+						<section class="teachers teachers__section_3">
 							<div class="teachers__column">
 								<div class="teachers__title">
 									<h2>about teachers</h2>
@@ -226,7 +233,7 @@
 								</div>
 							</div>
 						</section>
-						<section class="qa">
+						<section class="qa qa__section_4">
 							<div class="qa__column">
 								<div class="qa__title">
 									<h2>Q&A</h2>
