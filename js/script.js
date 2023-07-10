@@ -1,13 +1,13 @@
 //Слайдер swiper
 new Swiper('.price-slider', {
-    slidesPerView: 2.5,
+    slidesPerView: 3,
     simulateTouch: true,
     keyboard: {
         enabled: true,
         onlyInViewport: true,
     },
     spaceBetween: 87,
-    loop: false,
+    loop: true,
     loopedSlides: 0,
 });
 
@@ -93,6 +93,27 @@ if(footerLinks.length > 0) {
         const footerLink = e.target;
         if (footerLink.dataset.goto && document.querySelector(footerLink.dataset.goto)) {
             const gotoBlock = document.querySelector(footerLink.dataset.goto);
+            const gotoBlockValue = gotoBlock.getBoundingClientRect().top + pageYOffset - document.querySelector('header').offsetHeight;
+            
+            window.scrollTo({
+                top: gotoBlockValue,
+                behavior: "smooth"
+            });
+            e.preventDefault();
+        }
+    }
+}
+
+//Прокрутка при клике на Sign up
+const signUp = document.querySelectorAll('.intro__link[data-goto]');
+if(signUp.length > 0) {
+    signUp.forEach(signUp => {
+        signUp.addEventListener("click", onSignUpLinkClick);
+    });
+    function onSignUpLinkClick(e) {
+        const signUp = e.target;
+        if (signUp.dataset.goto && document.querySelector(signUp.dataset.goto)) {
+            const gotoBlock = document.querySelector(signUp.dataset.goto);
             const gotoBlockValue = gotoBlock.getBoundingClientRect().top + pageYOffset - document.querySelector('header').offsetHeight;
             
             window.scrollTo({
