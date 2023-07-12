@@ -9,6 +9,18 @@ new Swiper('.price-slider', {
     spaceBetween: 87,
     loop: true,
     loopedSlides: 0,
+    breakpoints: {
+        1400: {
+            slidesPerView: 3
+        },
+        993: {
+            slidesPerView: 2
+        },
+        0: {
+            slidesPerView: 1
+        },
+
+    },
 });
 
 const mediaQuery = window.matchMedia('(max-width: 992px)');

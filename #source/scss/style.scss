@@ -483,11 +483,13 @@ img{
 
 .price-slider {
     max-width: 1284px;
-    overflow: hidden;
     margin: 0px auto;
     padding-bottom: 100px;
+    @media (max-width: 1399px) {
+        max-width: 827px;
+    }
     @media (max-width: 992px) {
-        max-width: 377px;
+        max-width: 370px;
     }
     @media (max-width: 767px) {
         padding-bottom: 0px;
@@ -762,7 +764,7 @@ img{
         display: flex;
         justify-content:space-between;
         font-weight: 700;
-        font-size: 11px;
+        font-size: 15px;
         padding: 21.85px 0px 28.4px 0px;
         cursor: pointer;
         
@@ -775,7 +777,7 @@ img{
         
     }
     p {
-        font-size: 11px;
+        font-size: 15px;
         font-weight: 500;
         padding:0px 0px 3px 37.14px;
         &:last-child {
