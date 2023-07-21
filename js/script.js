@@ -23,28 +23,6 @@ new Swiper('.price-slider', {
     },
 });
 
-const mediaQuery = window.matchMedia('(max-width: 992px)');
-
-if (mediaQuery.matches) {
-    new Swiper('.price-slider', {
-        slidesPerView: 1,
-        simulateTouch: true,
-        keyboard: {
-            enabled: true,
-            onlyInViewport: true,
-        },
-        spaceBetween: 87,
-        loop: false,
-        loopedSlides: 0,
-        pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
-        },
-    }); // Вызываем функцию, если разрешение изменилось и соответствует условию
-} else {
-  // Здесь можно добавить код для обработки, если разрешение больше или меньше 700px
-}
-
 //Всплывающий header при scroll
 window.onscroll = function showHeader () {
 
@@ -95,7 +73,7 @@ if(menuLinks.length > 0) {
     }
 }
 
-//Прокрутка при клике на меню header
+//Прокрутка при клике на меню footer
 const footerLinks = document.querySelectorAll('.footer__link[data-goto]');
 if(footerLinks.length > 0) {
     footerLinks.forEach(footerLink => {
