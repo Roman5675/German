@@ -41,6 +41,11 @@ img{
     margin: 0px auto;
 }
 
+//Перевод px в rem
+@function rem($px) {
+    $result: math.div($px, 16) + rem;
+    @return $result;
+}
 
 //Header start 
 .header {
@@ -265,7 +270,7 @@ img{
     display: flex;
     flex-direction: column;
     p {
-        font-size: 0.83rem;
+        font-size: 1.125rem;
         font-weight: 700;
         max-width: 387.852px;
         color: #FFF;
