@@ -41,12 +41,6 @@ img{
     margin: 0px auto;
 }
 
-//Перевод px в rem
-@function rem($px) {
-    $result: math.div($px, 16) + rem;
-    @return $result;
-}
-
 //Header start 
 .header {
     position: absolute;
@@ -56,6 +50,8 @@ img{
     width: 100%;
     background-color: rgba(234, 189, 32, 0);
     padding: 20px 58px 20px 58px;
+    
+    
 }
 
 .header__fixed {
@@ -96,13 +92,6 @@ img{
             background-color: rgba(224, 220, 220, 0.5);
         }
     }
-    @media (max-width: 992px) {
-        padding: 0px 0px 40px 0px;
-    }
-    
-    @media (max-width: 767px) {
-        padding: 0px 0px 0px 0px;
-    }
 }
 .header__menu {
     .menu__list {
@@ -133,11 +122,7 @@ img{
         padding: 3px 13px 3px 13px;
         }
     }  
-    @media (max-width: 992px) {
-        gap: 30px;
-        padding: 0px 0px 0px 0px;
-    }
-    @media (max-width: 767px) {
+    @media (max-width: 1000px) {
         flex-direction: column;
         justify-content: center;
         padding: 0px 0px 0px 0px;
@@ -162,13 +147,13 @@ img{
 //Header end
 
 //Меню бургер start
-@media (max-width: 767px) {
+@media (max-width: 1000px) {
     .menu__icon {
         z-index: 5;
         display: block;
         position: relative;
         width: 30px;
-        height: 18px;
+        height: 20px;
         cursor: pointer;
     }
 
@@ -234,7 +219,7 @@ img{
         top: 0;
         left: 0;
         height: 83px;
-        background-color: rgb(165, 136, 30);
+        background-color: #EABD20;
     }
 
     .menu__body._active {
@@ -248,7 +233,7 @@ img{
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    padding: 296.5px 62.5px 0px 85px;
+    padding: 296.5008px 62.5008px 0px 85px;
     background-image: url(../img/intro-2.png), url(../img/intro-1.png);
     background-repeat: no-repeat;
     background-position: right,left;
@@ -272,7 +257,7 @@ img{
     p {
         font-size: 1.125rem;
         font-weight: 700;
-        max-width: 387.852px;
+        max-width: 387.8512px;
         color: #FFF;
         text-align: justify;
         @media (max-width: 992px) {
@@ -295,14 +280,14 @@ img{
         display: flex;
         position: absolute;
         left: -65px;
-        top: 38.3px;
+        top: 38.2992px;
         transform: rotate(-90deg);
         flex-direction: column;
         flex-shrink: 0;
         color: #7EC543;
         font-size: 50px;
         font-weight: 700;
-        letter-spacing: 2.5px;
+        letter-spacing: 2.5008px;
         text-transform: uppercase;
         @media (max-width: 992px) {
             left: -130px;
@@ -318,7 +303,7 @@ img{
 .intro__left-title {
     display: flex;
     flex-direction: column;
-    padding: 0px 0px 18.45px 60px;
+    padding: 0px 0px 18.4496px 60px;
     @media (max-width: 992px) {
         font-size: 20px;
         padding: 0px 0px 0px 0px;
@@ -331,7 +316,7 @@ img{
         text-transform: uppercase;
         @media (max-width: 992px) {
             font-size: 70px;
-            padding: 0px 0px 18.45px 0px;
+            padding: 0px 0px 18.4496px 0px;
         }
         @media (max-width: 767px) {
             font-size: 50px;
@@ -343,7 +328,7 @@ img{
         color: #FFF;
         font-size: 50px;
         font-weight: 700;
-        letter-spacing: 2.5px;
+        letter-spacing: 2.5008px;
         text-transform: uppercase;
         @media (max-width: 992px) {
             font-size: 20px;
@@ -353,14 +338,14 @@ img{
         @media (max-width: 767px) {
             text-align: center;
             font-size: 20px;
-            padding: 0px 0px 80px 00px;
+            padding: 0px 0px 80px 0px;
         }
     }
 }
 .intro__right {
     display: flex;
     height: 179px;
-    padding: 48.35px 0px 0px 0px;
+    padding: 48.3504px 0px 0px 0px;
     @media (max-width: 1157px) {
         flex-direction: column;
     }
@@ -445,9 +430,9 @@ img{
 }
 
 .classes__title{
-    font-size: 30px;
+    font-size: 1.875rem;
     font-weight: 700;
-    letter-spacing: 1.5px;
+    letter-spacing: 1.5008px;
     text-transform: uppercase;
     padding-bottom: 44px;
 }
@@ -496,12 +481,13 @@ img{
         width: auto;
     }
     h2 {
-        font-size: 23px;
+        font-size: 1.4375rem;
         font-weight: 700;
         padding-bottom: 21px;
     }
     p {
         font-weight: 700;
+        font-size: .9375rem;
     }
 }
 .classes__card-2 {
@@ -518,12 +504,13 @@ img{
         width: auto;
     }
     h2 {
-        font-size: 23px;
+        font-size: 1.4375rem;
         font-weight: 700;
         padding-bottom: 13px;
     }
     p {
         font-weight: 700;
+        font-size: .9375rem;
     }
 }
 .classes__card-3 {
@@ -553,7 +540,7 @@ img{
 .price__title {
     font-size: 30px;
     font-weight: 700;
-    letter-spacing: 1.5px;
+    letter-spacing: 1.5008px;
     text-transform: uppercase;
     text-align: center;
     padding: 130px 0px 38px 0px;
@@ -658,8 +645,8 @@ img{
 
 .swiper-pagination-bullet {
     background: #8C8C8C;
-    width: 20.857px;
-    height: 20.857px;
+    width: 20.8576px;
+    height: 20.8576px;
 }
 //price end
 
@@ -683,7 +670,7 @@ img{
 .teachers__title {
     font-size: 30px;
     font-weight: 700;
-    letter-spacing: 1.5px;
+    letter-spacing: 1.5008px;
     text-transform: uppercase;
     text-align: center;
     padding: 30px 0px 61px 0px;
@@ -742,7 +729,7 @@ img{
     max-width: 770px;
     border: 5px solid #EE892D;
     background: var(--white-fill, rgba(255, 255, 255, 0.30));
-    gap: 30.49px;
+    gap: 30.4896px;
     img {
         max-height: 393px;
     }
@@ -788,7 +775,7 @@ img{
     text-align: center;
     font-size: 30px;
     font-weight: 700;
-    letter-spacing: 1.5px;
+    letter-spacing: 1.5008px;
     text-transform: uppercase;
     padding: 130px 0px 36px 0px;
     @media (max-width: 992px) {
@@ -819,7 +806,7 @@ img{
 
 .qa__spoilers {
     text-align: justify;
-    width: 458.812px;
+    width: 458.8128px;
     border: 5px solid #7EC543;
     background: var(--white-fill, rgba(255, 255, 255, 0.30));
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
@@ -831,7 +818,7 @@ img{
         width: 305px;
     }
     details {
-        width: 406.619px;
+        width: 406.6192px;
         border-bottom: 2px solid #7EC543;
         margin: 0px 0px 0px 23.4px;
         @media (max-width: 992px) {
@@ -848,8 +835,8 @@ img{
         display: flex;
         justify-content:space-between;
         font-weight: 700;
-        font-size: 15px;
-        padding: 21.85px 0px 28.4px 0px;
+        font-size: .9375rem;
+        padding: 21.8496px 0px 28.4px 0px;
         cursor: pointer;
         
     }
@@ -863,7 +850,7 @@ img{
     p {
         font-size: 15px;
         font-weight: 500;
-        padding:0px 0px 3px 37.14px;
+        padding:0px 0px 3px 37.1408px;
         &:last-child {
             padding-bottom: 40px;
         }
@@ -895,30 +882,30 @@ img{
 .qa__text-right-title {
     font-size: 11px;
     font-weight: 700;
-    margin: 32.85px 0px 8.45px 0px;
+    margin: 32.8496px 0px 8.4496px 0px;
 }
 .qa__text-right-par {
     font-size: 11px;
     font-weight: 500;
-    margin-bottom: 30.62px;
+    margin-bottom: 30.6208px;
 }
 .qa__textarea-1 {
-    max-width: 266.203px;
-    min-width: 266.203px;
-    height: 58.429px;
+    max-width: 266.2032px;
+    min-width: 266.2032px;
+    height: 58.4288px;
     border: 1px solid rgba(39, 35, 67, 0.80);
     background: #F5F6F7;
-    padding: 2.66px 0px 0px 7.92px;
+    padding: 2.6608px 0px 0px 7.92px;
     margin-bottom: 6.64px;
 }
 .qa__input-1 {
-    width: 266.203px;
-    height: 19.919px;
+    width: 266.2032px;
+    height: 19.9184px;
     flex-shrink: 0;
     border: 1px solid rgba(39, 35, 67, 0.80);
     background: #F5F6F7;
-    padding: 0px 0px 0px 7.13px;
-    margin-bottom: 16.94px;
+    padding: 0px 0px 0px 7.1296px;
+    margin-bottom: 16.9408px;
 }
 .qa__text-right-button {
     width: 103px;
@@ -947,22 +934,22 @@ img{
     
     @media (max-width: 692px) {
         height: 1450px;
-        background-size: 990.5px 100%;
+        background-size: 990.5008px 100%;
     }
 }
 .start__title {
     font-size: 30px;
     font-weight: 700;
-    letter-spacing: 1.5px;
+    letter-spacing: 1.5008px;
     text-transform: uppercase;
     text-align: center;
-    padding: 40.09px 0px 58px 0px;
+    padding: 40.0896px 0px 58px 0px;
 }
 .start__cards {
     display: flex;
     align-items: center;
     flex-direction: column;
-    gap: 57.57px;
+    gap: 57.5696px;
     
     @media (max-width: 767px) {
         padding: 0px 10px 0px 10px;
@@ -992,18 +979,18 @@ img{
     justify-content: space-between;
     width: 304px;
     height: 220px;
-    padding: 24px 85px 34.65px 28.36px;
+    padding: 24px 85px 34.6496px 28.36px;
     h2 {
         color: #FFD803;
         font-size: 50px;
         font-weight: 700;
-        letter-spacing: 2.5px;
+        letter-spacing: 2.5008px;
         text-transform: uppercase;
     }
     p {
         font-size: 18px;
         font-weight: 700;
-        letter-spacing: 0.9px;
+        letter-spacing: .9008px;
     }
 }
 .start__second-row {
@@ -1106,7 +1093,7 @@ img{
 .start__sign-up-4 {
     position: absolute;
     left: 895px;
-    top: 104.81px;
+    top: 104.8096px;
     img {
         width: 282px;
         height: 103px;
@@ -1243,12 +1230,12 @@ img{
     gap: 27px;
     & li:nth-child(1) {
         a {
-        padding: 3px 26.73px 3px 16px;
+        padding: 3px 26.7296px 3px 16px;
         }
     }
     & li:nth-child(2) {
         a {
-            padding: 3px 16.29px 3px 16px;
+            padding: 3px 16.2896px 3px 16px;
         }
     }
     & li:nth-child(3) {
